@@ -1,3 +1,16 @@
+/* Color Variables */
+:root {
+  --primary-color: #1f1f1f;
+  --secondary-color: rgba(0, 0, 0, 0.501);
+  --text-color: white;
+  --accent-color: red;
+  --scrollbar-track-color: #f1f1f1;
+  --scrollbar-thumb-color: #1f1f1f;
+  --scrollbar-thumb-hover-color: black;
+  --footer-bg-color: black;
+}
+
+/* Base Styles */
 html {
   font-size: 10px;
   scroll-behavior: smooth;
@@ -6,14 +19,13 @@ html {
 body {
   box-sizing: border-box;
   margin: 0;
-  padding: none;
-  background-color: #1f1f1f;
-  color: white;
-  overflow-x:hidden;
+  padding: none; /* Change 'none' to '0' */
+  background-color: var(--primary-color);
+  color: var(--text-color);
+
 }
 
-/* Reusable styles */
-
+/* Reusable Styles */
 .section {
   margin-top: 9rem;
   margin-left: 1rem;
@@ -26,11 +38,7 @@ body {
   flex-direction: row;
 }
 
-.sectionHeader {
-  font-size: 5rem;
-  text-align: center;
-}
-
+.sectionHeader,
 .socialMediaLinks {
   font-size: 5rem;
   text-align: center;
@@ -67,11 +75,10 @@ ul {
   list-style: none;
 }
 
-/* Nav styling */
-
+/* Navigation Styling */
 .header {
   height: 8rem;
-  background-color: rgba(0, 0, 0, 0.501);
+  background-color: var(--secondary-color);
   position: fixed;
   top: 0;
   left: 0;
@@ -97,7 +104,7 @@ header nav {
 
 .navLink {
   font-size: 2rem;
-  color: white;
+  color: var(--text-color);
   text-decoration: none;
   transition: all 0.8s;
 }
@@ -106,8 +113,7 @@ header nav {
   font-size: 2.1rem;
 }
 
-/* Info Section specific styles */
-
+/* Info Section Specific Styles */
 .opener {
   font-size: 8rem;
 }
@@ -131,7 +137,7 @@ header nav {
 }
 
 .socialLink {
-  color: white;
+  color: var(--text-color);
   font-size: 8rem;
   z-index: 0;
   transition: all 0.5s;
@@ -139,12 +145,11 @@ header nav {
 
 .socialLink:hover {
   font-size: 8.3rem;
-  color: red;
+  color: var(--accent-color);
   /* text-shadow: 0rem 2rem 2rem black; */
 }
 
-/* Scroll Bar styling */
-
+/* Scroll Bar Styling */
 /* width */
 ::-webkit-scrollbar {
   width: 10px;
@@ -152,25 +157,24 @@ header nav {
 
 /* Track */
 ::-webkit-scrollbar-track {
-  background: #f1f1f1;
+  background: var(--scrollbar-track-color);
 }
 
 /* Handle */
 ::-webkit-scrollbar-thumb {
-  background: #1f1f1f;
+  background: var(--scrollbar-thumb-color);
 }
 
 /* Handle on hover */
 ::-webkit-scrollbar-thumb:hover {
-  background: black;
+  background: var(--scrollbar-thumb-hover-color);
 }
 
 /* Footer Styling */
-
 .footer {
   padding-top: 2rem;
   padding-bottom: 2rem;
-  background-color: black;
+  background-color: var(--footer-bg-color);
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr;
 }
@@ -182,5 +186,202 @@ header nav {
 }
 
 .footerCredit {
-  color: white;
+  color: var(--text-color);
+}
+
+@media screen and (max-width: 936px) {
+  html {
+    font-size: 10px;
+    scroll-behavior: smooth;
+  }
+
+  body {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0; /* Change 'none' to '0' */
+    background-color: #1f1f1f;
+    color: white;
+    width: 100vw;
+    /* overflow: hidden; */
+  }
+
+  /* Reusable styles */
+
+  .section {
+    margin-top: 6rem; /* Adjusted for smaller screens */
+    margin-left: 1rem;
+    margin-right: 1rem;
+    margin-bottom: 6rem; /* Adjusted for smaller screens */
+  }
+
+  .sideXside {
+    display: flex;
+    flex-direction: column; /* Change to 'column' for smaller screens */
+  }
+
+  .sectionHeader {
+    font-size: 6rem; /* Adjusted for smaller screens */
+    text-align: center;
+  }
+
+  .socialMediaLinks li a {
+    font-size: 10rem; /* Adjusted for smaller screens */
+    text-align: center;
+  }
+
+  .textBlock {
+    font-size: 4rem;
+    text-align: center;
+    width: 80%; /* Adjusted for smaller screens */
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .videoContainer {
+    margin-top: 8rem;
+    width: 100%;
+  }
+
+  .videoContainer h2 {
+    margin-left: 1rem;
+    font-size: 4rem;
+  }
+
+  .videoEmbed {
+    display: block;
+    width: 100vw;
+    height: 50vh;
+  }
+
+  ul {
+    list-style: none;
+  }
+
+  /* Nav styling */
+
+  .header {
+    height: 8rem;
+    background-color: rgba(0, 0, 0, 0.501);
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+  }
+
+  header nav {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .navList {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem; /* Adjusted for smaller screens */
+    width: 100%;
+    height: 6rem;
+    padding-left: 0;
+  }
+
+  .navLink {
+    font-size: 2rem;
+    color: white;
+    text-decoration: none;
+    transition: all 0.8s;
+  }
+
+  .navLink:hover {
+    font-size: 2.1rem;
+  }
+
+  /* Info Section specific styles */
+
+  .opener {
+    font-size: 8rem; /* Adjusted for smaller screens */
+    text-align: center;
+  }
+
+  .profileImage {
+    margin-top: 4rem;
+    margin-left: auto;
+    margin-right: auto; /* Adjusted for smaller screens */
+  }
+
+  .profileImage img {
+    height: 40rem; /* Adjusted for smaller screens */
+    width: 40rem; /* Adjusted for smaller screens */
+    border-radius: 50%;
+    box-shadow: 0rem 1rem 1rem black; /* Adjusted for smaller screens */
+  }
+
+  .socialMediaLinks {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .socialLink {
+    color: white;
+    font-size: 6rem; /* Adjusted for smaller screens */
+    z-index: 0;
+    transition: all 0.5s;
+  }
+
+  .socialLink:hover {
+    font-size: 6.3rem; /* Adjusted for smaller screens */
+    color: red;
+  }
+
+  /* Scroll Bar styling */
+
+  /* width */
+  ::-webkit-scrollbar {
+    width: 10px;
+  }
+
+  /* Track */
+  ::-webkit-scrollbar-track {
+    background: #f1f1f1;
+  }
+
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    background: #1f1f1f;
+  }
+
+  /* Handle on hover */
+  ::-webkit-scrollbar-thumb:hover {
+    background: black;
+  }
+
+  /* Footer Styling */
+
+  .footer {
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+    background-color: black;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .footerNavList {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+  }
+
+  .footerNavList li a {
+    font-size: 3rem;
+  }
+
+  .footerNavList li p {
+    font-size: 3rem;
+  }
+  .footerCredit {
+    color: white;
+  }
 }
