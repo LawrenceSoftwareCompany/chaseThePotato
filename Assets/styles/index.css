@@ -22,6 +22,7 @@ body {
   padding: none; /* Change 'none' to '0' */
   background-color: var(--primary-color);
   color: var(--text-color);
+
 }
 
 /* Reusable Styles */
