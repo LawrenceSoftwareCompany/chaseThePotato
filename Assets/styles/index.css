@@ -33,6 +33,11 @@ body {
   margin-bottom: 10rem;
 }
 
+#InfoSection {
+  display: flex;
+  justify-content: center;
+}
+
 .sideXside {
   display: flex;
   flex-direction: row;
